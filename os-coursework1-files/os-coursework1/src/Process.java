@@ -27,30 +27,23 @@ public abstract class Process implements Comparable<Process> {
    * Returns the time the process spends waiting in the ready queue.
    */
   public int getWaitingTime() {
-
-    // TODO
     
-    return 0;
+    return terminatedTime - createdTime - cpuTime;
   }
 
   /**
    *  Returns the turnaround time of the process.
    */
   public int getTurnaroundTime() {
-
-    // TODO
     
-    return 0;
+    return terminatedTime - createdTime;
   }
 
   /**
    * Returns the response time of the process.
    */
   public int getResponseTime() {
-
-    // TODO
-    
-    return 0;
+    return startedTime - createdTime;
   }
 
   /**
@@ -137,6 +130,11 @@ public abstract class Process implements Comparable<Process> {
    * Returns a row containing the process metrics
    */
   public String getRecord() {
+      //TODO
+      System.out.println(id+"\t"+priority+"\t"+createdTime+"\t"+startedTime+"\t"+
+      terminatedTime+"\t"+cpuTime+"\t"+blockedTime+
+      "\t"+getTurnaroundTime()+"\t"+getWaitingTime()+
+      "\t"+getResponseTime());
     return id+"\t"+priority+"\t"+createdTime+"\t"+startedTime+"\t"+
       terminatedTime+"\t"+cpuTime+"\t"+blockedTime+
       "\t"+getTurnaroundTime()+"\t"+getWaitingTime()+

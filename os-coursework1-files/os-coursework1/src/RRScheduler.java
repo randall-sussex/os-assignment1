@@ -1,4 +1,5 @@
 import java.util.Properties;
+import java.util.Queue;
 
 /**
  * Round Robin Scheduler
@@ -8,6 +9,9 @@ import java.util.Properties;
 public class RRScheduler extends AbstractScheduler {
 
   // TODO
+    private Queue<Process> readyQueue;
+    private int timeQuantum;
+    private boolean usedFullTimeQuantum;
 
   /**
    * Adds a process to the ready queue.
@@ -17,6 +21,7 @@ public class RRScheduler extends AbstractScheduler {
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
     // TODO
+    this.usedFullTimeQuantum = usedFullTimeQuantum;
 
   }
 
