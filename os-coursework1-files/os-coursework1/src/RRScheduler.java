@@ -35,8 +35,8 @@ public class RRScheduler extends AbstractScheduler {
 
     // TODO
     readyQueue.offer(process);
+    System.out.println(process.getNextBurst());
     this.usedFullTimeQuantum = usedFullTimeQuantum;
-
   }
 
   /**
@@ -45,8 +45,7 @@ public class RRScheduler extends AbstractScheduler {
    * Returns null if there is no process to run.
    */
   public Process schedule() {
-      
-    // TODO
+
     System.out.println("Scheduler selects process "+readyQueue.peek());
     return readyQueue.poll();
   }

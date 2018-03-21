@@ -70,7 +70,6 @@ public class ProcessModel {
     // get the next event for this process
     // (which could be BLOCK, TIMER, or TERMINATE)
     int timeQuantum = scheduler.getTimeQuantum();
-    System.out.println(scheduler.getTimeQuantum());
     Event newEvent = process.setRunning(currentTime+interruptTime, timeQuantum);
     if (newEvent != null)
       newEvents.add(newEvent);

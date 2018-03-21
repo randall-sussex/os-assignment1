@@ -1,6 +1,5 @@
 import java.util.Queue;
 import java.util.LinkedList;
-import java.util.Properties;
 
 /**
  * First-Come First-Served Scheduler

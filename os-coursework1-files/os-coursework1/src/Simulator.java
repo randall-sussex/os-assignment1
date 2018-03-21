@@ -56,6 +56,7 @@ public class Simulator
       scheduler = (AbstractScheduler)Class
 	.forName(parameters.getProperty("scheduler")).newInstance();
       scheduler.initialize(parameters);
+      
     } catch (Exception e) {
       System.err.println("Given scheduler class not found");
       System.exit(1);
