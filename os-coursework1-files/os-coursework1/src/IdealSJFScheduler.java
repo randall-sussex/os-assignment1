@@ -18,7 +18,6 @@ public class IdealSJFScheduler extends AbstractScheduler {
    */
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
-    // TODO
     int burstSize = process.getNextBurst();
     
     // if getnextburst does not return -1 will search through list until a point is found where "process" has the smallest burst time

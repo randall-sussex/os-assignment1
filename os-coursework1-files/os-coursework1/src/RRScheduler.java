@@ -9,7 +9,6 @@ import java.util.Queue;
  */
 public class RRScheduler extends AbstractScheduler {
 
-  // TODO
     private Queue<Process> readyQueue = new LinkedList<Process>();
 
     private boolean usedFullTimeQuantum;
@@ -33,7 +32,6 @@ public class RRScheduler extends AbstractScheduler {
    */
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
-    // TODO
     readyQueue.offer(process);
     System.out.println(process.getNextBurst());
     this.usedFullTimeQuantum = usedFullTimeQuantum;

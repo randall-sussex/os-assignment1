@@ -9,7 +9,6 @@ import java.util.Properties;
  */
 public class SJFScheduler extends AbstractScheduler {
 
-  // TODO
     private LinkedList<Process> readyQueue = new LinkedList();
     HashMap<Process, Integer> burstRecord = new HashMap();
     Properties parameters;
@@ -27,6 +26,9 @@ public class SJFScheduler extends AbstractScheduler {
        return (int)Math.floor(c);
     }
     
+     public boolean isPreemptive() {
+    return true;
+  }
   /**
    * Adds a process to the ready queue.
    * usedFullTimeQuantum is true if process is being moved to ready
@@ -37,7 +39,6 @@ public class SJFScheduler extends AbstractScheduler {
     @Override
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
-    // TODO
     int time = initialBurst;
     if (burstRecord.containsKey(process)){
     time = calculate(process);

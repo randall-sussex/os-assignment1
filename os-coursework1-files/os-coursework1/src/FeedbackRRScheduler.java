@@ -9,7 +9,6 @@ import java.util.Properties;
  */
 public class FeedbackRRScheduler extends AbstractScheduler {
 
-  // TODO
     private LinkedList<Process> readyQueue = new LinkedList<Process>();
 
     Properties parameters;
@@ -31,7 +30,6 @@ public class FeedbackRRScheduler extends AbstractScheduler {
    */
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
-    // TODO
     //if the process has used full time quantum the priority is decreased
     // (lower value = higher priority)
     if (usedFullTimeQuantum){

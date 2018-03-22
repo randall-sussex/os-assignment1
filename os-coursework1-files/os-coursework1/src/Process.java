@@ -130,11 +130,6 @@ public abstract class Process implements Comparable<Process> {
    * Returns a row containing the process metrics
    */
   public String getRecord() {
-      //TODO
-      System.out.println(id+"\t"+priority+"\t"+createdTime+"\t"+startedTime+"\t"+
-      terminatedTime+"\t"+cpuTime+"\t"+blockedTime+
-      "\t"+getTurnaroundTime()+"\t"+getWaitingTime()+
-      "\t"+getResponseTime());
     return id+"\t"+priority+"\t"+createdTime+"\t"+startedTime+"\t"+
       terminatedTime+"\t"+cpuTime+"\t"+blockedTime+
       "\t"+getTurnaroundTime()+"\t"+getWaitingTime()+
