@@ -1,0 +1,5 @@
+meanInterArrival // the mean interval between cration of a process
+meanCpuBusrt // meun burst time given
+meanNumberBurts // the mean number of bursts the processes are given
+numberOfProcesses // the number of processe that will be created
+staticPriority // the priority given to all processes created using the input generator
