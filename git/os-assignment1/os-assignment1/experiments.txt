@@ -1,0 +1,44 @@
+What effect does the work load have on the schedulers?
+	// test with work loads of varying sizes
+	// multiple processes with high burst time
+	// multiple processes with low burst times
+	// vary number of bursts
+What effect does the variety of burst time have on scheduler efficiency??
+	// same as above
+	// have processes with multiple high, and low bust times -- should confuse 	sjf's exponential algorithm
+how does priorety change the efficiency of the scheduleds? //SIDE-NOTE this only really has an affect on the feedback round robin, but would be interesting to see how the efficiency changes
+	// only really effexts feedback round robin
+	// useful comparison against other schedulers
+	// only really comparing frr against other schedulers
+	// use high burt high priority && low busrt low priority
+		// and visa versa
+			// low prio high busrst
+
+10 processes for each test
+4 sets of tests to run for each experiment
+3 * 4 = 12 sets of tests to analyse for each experiment
+how many tests? e1-3 e2-3 e3-4
+total of 40 sets of data overall
+	10 proesses for each test
+		upto 10 bursts for each process
+			
+low burst time < 50
+high burst time > 100
+e1
+	// high no if no of bursts per process
+	// low no of bursts per process
+	// equal mix high/low - equal mix of bursts
+	
+e2
+// focus on bust times not number of bursts
+	// equal mix of high and low burst times
+	// all high burst times
+	// all low burst times
+	// mostly 2/3 or 3/4 high burst times 1/3 or 1/4 low burst times
+
+e3
+// equally distribute priorities, and burst times.
+	// processes 1/2 high priority high burst times 1/2 low priority low burst times - same no of bursts
+	//1/2 high priority low burst time 1/2 low priority high burst time
+	// high prio 2/1 high/low // low prio 2/1 high/low
+	// high prio 2/1 low/high // low prio 2/1 low/high
