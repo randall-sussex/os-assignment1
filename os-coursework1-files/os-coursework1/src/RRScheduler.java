@@ -1,4 +1,6 @@
+import java.util.LinkedList;
 import java.util.Properties;
+import java.util.Queue;
 
 /**
  * Round Robin Scheduler
@@ -7,8 +9,22 @@ import java.util.Properties;
  */
 public class RRScheduler extends AbstractScheduler {
 
-  // TODO
+    private Queue<Process> readyQueue = new LinkedList<Process>();
 
+    private boolean usedFullTimeQuantum;
+    Properties parameters;
+    private int timeQuantum ;
+
+    
+    public void initialize(Properties parameters) {
+        this.parameters = parameters;
+        timeQuantum = Integer.parseInt(parameters.getProperty("timeQuantum"));
+    }
+    
+    
+    public int getTimeQuantum(){
+        return timeQuantum;
+    }
   /**
    * Adds a process to the ready queue.
    * usedFullTimeQuantum is true if process is being moved to ready
@@ -16,8 +32,9 @@ public class RRScheduler extends AbstractScheduler {
    */
   public void ready(Process process, boolean usedFullTimeQuantum) {
 
-    // TODO
-
+    readyQueue.offer(process);
+    System.out.println(process.getNextBurst());
+    this.usedFullTimeQuantum = usedFullTimeQuantum;
   }
 
   /**
@@ -27,8 +44,7 @@ public class RRScheduler extends AbstractScheduler {
    */
   public Process schedule() {
 
-    // TODO
-
-    return null;
+    System.out.println("Scheduler selects process "+readyQueue.peek());
+    return readyQueue.poll();
   }
 }

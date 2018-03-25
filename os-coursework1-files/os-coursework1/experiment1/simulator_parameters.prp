@@ -1,7 +1,7 @@
-scheduler=FcfsScheduler
+scheduler=SJFScheduler
 timeLimit=10000
 periodic=false
 interruptTime=0
-timeQuantum=20
+timeQuantum=15
 initialBurstEstimate=10
 alphaBurstEstimate=0.5
